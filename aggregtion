@@ -1,0 +1,78 @@
+package practies;
+
+class charger{
+	private String brand;
+	private int voltage;
+	public charger(String brand, int voltage) {
+		super();
+		this.brand = brand;
+		this.voltage = voltage;
+	}
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public int getVoltage() {
+		return voltage;
+	}
+	public void setVoltage(int voltage) {
+		this.voltage = voltage;
+	}
+	
+}
+class OS {
+	private String name;
+	private int size;
+	public OS(String name, int size) {
+		super();
+		this.name = name;
+		this.size = size;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+	
+	
+}
+
+class Mobile
+{
+	OS os=new OS("Android" , 512); 
+	void hascharger(charger c)
+	{
+		System.out.println(c.getBrand());
+		System.out.println(c.getVoltage());
+		
+		
+	}
+	
+}
+
+
+
+public class aggregaation {
+
+	public static void main(String[] args) {
+		Mobile m =new Mobile();
+	charger c=	new charger("nothing",25);
+	System.out.println(m.os.getName());
+	System.out.println(m.os.getSize());
+	
+	m.hascharger(c);
+	m=null;
+		
+
+	}
+
+}
