@@ -1,0 +1,25 @@
+package practies;
+//when u attach final key word in that it cannto execute  children class if u want to restict inhertance of class use final key word
+  class plane{
+//	  in method use of final it inherit the children but not override the merthod
+ void flay() {
+		System.out.println("plane is flying");
+}
+}
+class cargoplane extends plane{
+	void flay() {
+	System.out.println("cargoplane is flying");
+	
+}
+}
+
+public class finalkeyword {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		cargoplane cp=new cargoplane();
+		cp.flay();
+
+	}
+
+}
