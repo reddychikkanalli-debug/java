@@ -1,0 +1,102 @@
+package practies;
+
+import java.util.Scanner;
+
+//Abstraction example to when to use abstraction
+
+class Squar {
+	float side;
+	float area;
+	
+	void acceptInput()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of side");
+		side=sc.nextFloat();
+		
+	}
+	void calArea()
+	{
+		area=side*side;
+	}
+	void dispArea()
+	{
+		System.out.println(area);
+	}
+}
+class Rectangle {
+	float length;
+	float bredth;
+	float Area;
+	
+	void acceptInput()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of length");
+		length=sc.nextFloat();
+		System.out.println("Enter the size of bredth");
+		bredth=sc.nextFloat();
+		
+	}
+	void calArea()
+	{
+		Area=length*bredth;
+	}
+	void dispArea()
+	{
+		System.out.println(Area);
+	}
+}
+class Circal {
+	float radius;
+	float area;
+	
+	void acceptInput()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the radius");
+		radius=sc.nextFloat();
+		
+	}
+	void calArea()
+	{
+		area=3.142f*radius*radius;
+	}
+	void dispArea()
+	{
+		System.out.println(area);
+	}
+}
+
+
+
+
+
+
+
+
+
+public class AreaPrograms {
+
+	public static void main(String[] args) {
+             Squar s=new Squar();
+            Rectangle r= new Rectangle();
+          Circal c= new Circal();
+          
+          s.acceptInput();
+          s.calArea();
+          s.dispArea();
+          
+          r.acceptInput();
+          r.calArea();
+          r.dispArea();
+          
+          c.acceptInput();
+          c.calArea();
+          c.dispArea();
+          
+            
+
+	}
+
+}
