@@ -1,0 +1,105 @@
+package practies;
+
+import java.util.Scanner;
+
+interface cal
+{
+	public void add();
+	public void sub();
+}
+class Mycal1 implements cal
+{
+	public void add()
+	{
+		int x=100;
+		int y=200;
+		System.out.println(x+y);
+}
+	public void sub()
+	{
+		int x=100;
+		int y=200;
+		System.out.println(x-y);
+	}
+}
+class Mycal2 implements cal
+{
+	public void add1()
+	{
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter the first num");
+		int x=sc.nextInt();
+		
+		System.out.println("Enter the first num");
+		int y=sc.nextInt();
+		
+		System.out.println(x+y);
+	}
+	public void sub()
+	{
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter the first num");
+		int x=sc.nextInt();
+		
+		System.out.println("Enter the first num");
+		int y=sc.nextInt();
+		
+		if(x==0)
+		{
+			System.out.println(" first num cannot Zero");
+		}
+		else
+		{
+			System.out.println(x-y);
+		}
+	}
+	public void add()
+	{
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter the first num");
+		int x=sc.nextInt();
+		
+		System.out.println("Enter the first num");
+		int y=sc.nextInt();
+		
+		if(x==0)
+		{
+			System.out.println(" first num cannot Zero");
+		}
+		else
+		{
+			System.out.println(x-y);
+		}
+	
+	}
+}
+
+class math {
+	static void permit(cal ref) {
+		ref.add();
+		ref.sub();
+	}
+}
+
+
+
+public class inface {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Mycal1 mc1=new Mycal1();
+		Mycal2 mc2=new Mycal2();
+//		Mycal3 mc3=new Mycal3();
+		
+//		mc1.add();
+//		mc1.sub();
+//		
+//		mc2.add();
+//		mc2.sub();
+		
+		math.permit(mc1);
+		math.permit(mc2);
+
+	}
+
+}
