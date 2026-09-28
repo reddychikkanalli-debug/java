@@ -1,0 +1,26 @@
+package practies;
+
+public class substring1 {
+	static void printallsubString(String st,int k) {
+		int n=st.length();
+		
+			for(int s=0;s<=n-k;s++) {
+				for(int e=s;e<=(s+k)-1;e++) {
+					System.out.print(st.charAt(e));
+					
+				}
+				System.out.println();
+				
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="abcde";
+		
+		printallsubString(s,3);
+
+	}
+
+}
