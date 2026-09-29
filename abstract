@@ -1,0 +1,46 @@
+package practies;
+
+ abstract class Bird
+{
+	 abstract void eat();
+	 abstract void fly();
+	 
+
+}
+  abstract class Eagle extends Bird
+ {
+	 void fly()
+	 {
+		 System.out.println("Eagle flyes at great height");	 }
+ }
+  class SerpentEagle extends Eagle
+  {
+	  void eat()
+	  {
+		  System.out.println("Hunts over mountain");
+	  }
+  }
+  class GoldenEagle extends Eagle
+  {
+	  void eat()
+	  {
+		  System.out.println("Hunts over Ocean");
+	  }
+  }
+
+public class AbstractProgram {
+
+	public static void main(String[] args) {
+		SerpentEagle se=new SerpentEagle();
+		GoldenEagle ge=new GoldenEagle();
+		
+		se.eat();
+		se.fly();
+		  
+		ge.eat();
+		ge.fly();
+	
+
+	}
+
+}
