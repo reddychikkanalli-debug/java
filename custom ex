@@ -1,0 +1,82 @@
+package practies;
+
+import java.util.Scanner;
+    class InvalidUserexception extends Exception
+
+    {
+    	public String getMessage()
+    	{
+    		return "Inavlid pin,try again";
+    	}
+    }
+class ATM{
+  private int pin=8888;
+  private int p;
+	void  acceptpin() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the pin");
+		p=sc.nextInt();
+
+	}
+
+void validatepin()throws InvalidUserexception
+{
+	if(pin==p) {
+		System.out.println("login succes");
+		
+	}
+	else {
+		InvalidUserexception  iue =new  InvalidUserexception();
+		System.out.println(iue.getMessage());
+		throw iue;
+	}
+}
+
+}
+      class Bank
+      {
+    	  void intiate()
+    	  {
+    		ATM atm=  new ATM();
+    		try {
+    			atm.acceptpin();
+        		atm.validatepin();
+
+    		}catch(InvalidUserexception e) {
+    			
+    			try {
+        			atm.acceptpin();
+            		atm.validatepin();
+
+        		}catch(Exception f) {
+//        			ATM atm=  new ATM();
+            		try {
+            			atm.acceptpin();
+                		atm.validatepin();
+
+            		}catch(Exception r) {
+            		System.out.println("card blocked");
+            		
+            		System.exit(0);
+            			
+            		}
+            			
+        			
+        			
+        		}
+    			
+    		}
+    		
+    	  }
+      }
+public class customBank {
+
+	public static void main(String[] args) {
+		
+		Bank bank=new Bank();
+		bank.intiate();
+
+
+	}
+
+}
