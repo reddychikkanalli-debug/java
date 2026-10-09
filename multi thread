@@ -1,0 +1,85 @@
+package multithread;
+
+import java.util.Scanner;
+
+class  Test1 implements Runnable
+{
+	public void run() {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter first number");
+	    int a=sc.nextInt();
+	    System.out.println("Enter second number");
+	    int b=sc.nextInt();
+	    int c=a+b;
+	    System.out.println(c);
+	    System.out.println("addtion ended");
+		
+		
+	}
+}
+
+
+
+class  Test2 implements Runnable
+{
+	public  void run()
+	{
+System.out.println("printing character strated");
+	    
+	    for(int i=10;i<=20;i++) {
+	    	System.out.println(i);
+	    	try {
+	    		Thread.sleep(4000);
+
+	    		}
+	    	catch(Exception e) {
+	    		System.out.println("yes");
+	    		
+	    	}
+	    	}
+}
+}
+	class  Test3 implements Runnable
+	{
+		public void run(){
+			for(int i=65;i<=75;i++) {
+		    	System.out.println((char)i);
+		    	try {
+		    		Thread.sleep(4000);
+				    
+		    	}catch(Exception e) {
+		    		
+		    	}
+			
+		}
+			
+		}
+	}
+
+
+
+
+public class demo1 {
+
+	public static void main(String[] args) throws Exception 
+	{
+		
+		Test1 t1=new Test1();
+		Test2 t2=new Test2();
+		Test3 t3=new Test3();
+		
+//		t1.start();
+//		t2.start();
+//		t3.start();
+//		
+		Thread th1=new Thread(t1);
+		Thread th2=new Thread(t2);
+		Thread th3=new Thread(t3);
+		th1.start();
+		th2.start();
+		th3.start();
+		
+	}
+
+}
+
