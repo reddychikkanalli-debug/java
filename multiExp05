@@ -1,0 +1,29 @@
+package multithread;
+
+public class Exp05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("main thread started");
+		try {
+			System.out.println("main thread excuting");
+			Thread.sleep(3000);
+			
+			System.out.println("main thread excuting");
+			Thread.sleep(3000);
+			System.out.println("main thread excuting");
+			Thread.sleep(3000);
+			Thread.currentThread().interrupt();
+
+			System.out.println("main thread excuting");
+			Thread.sleep(3000);
+			System.out.println("main thread excuting");
+			
+		}catch(Exception e) {
+//			System.out.println("main thread interputed");
+			e.printStackTrace();
+		}
+     System.out.println("main thread completed");
+	}
+
+}
