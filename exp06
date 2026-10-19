@@ -1,0 +1,36 @@
+package multithread;
+
+class ram extends Thread{
+   public 	void run() {
+	   System.out.println("char print started");
+	   
+	   for(int i=65;i<=75;i++) {
+		   System.out.println((char)i);
+		   try {
+			   Thread.sleep(2000);
+		   }catch(Exception e) {
+			   
+		   }
+	   }
+		
+	   System.out.println("completed");
+	}
+}
+
+public class Exp06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("main thread stated and connection estd" );
+		ram r=new ram();
+		r.start();
+		try {
+			r.join();
+		}catch(Exception e) {
+			
+		}
+		System.out.println("main thread completed and connection closed");
+
+	}
+
+}
