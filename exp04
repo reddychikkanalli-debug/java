@@ -1,0 +1,79 @@
+package multithread;
+
+
+
+     class  ram1 extends Thread{
+    	 public void run() {
+    		 System.out.println("typing  started");
+    		 for(int i=1;i<5;i++) {
+    			 System.out.println("typing...");
+    			 try {
+        			 Thread.sleep(5000);
+
+    			 }catch(Exception e) {
+    				 System.out.println("printing ended");
+    			 }
+
+        		 System.out.println("typing ended");
+    		 }
+    	 }
+     }
+     class ram2 extends Thread{
+    	 public void  run() {
+    		 System.out.println("code complition started");
+    		 for(;;) {
+    			 System.out.println("code complition");
+    			 try {
+    				Thread.sleep(2000);
+    			 }catch(Exception e) {
+    				 
+    			 }
+    			 
+        		 System.out.println("code complition end");
+
+    		 }
+    	 }
+     }
+     class ram3 extends Thread{
+    	 public void  run() {
+    		 System.out.println("auto saving started");
+    		 for(;;) {
+    			 System.out.println("auto saving complition");
+    			 try {
+    				Thread.sleep(2000);
+    			 }catch(Exception e) {
+    				 
+    			 }
+    			 System.out.println("auto saving end");
+
+    		 }
+    	 }
+     }
+     
+     
+public class Exp4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ram1 t1=new ram1();
+		t1.setName("TYPE");
+		
+		ram2 t2=new ram2();
+		t2.setName("COMPLITION");
+		t2.setDaemon(true);
+        
+		ram3 t3=new ram3();
+		t2.setName("SAVING");
+		t2.setDaemon(true);
+
+      t1.start();
+      t2.start();
+      t3.start();
+
+
+
+
+	}
+
+}
