@@ -1,0 +1,90 @@
+package multithread;
+import java.util.Scanner;
+   class  Test extends Thread{
+	   public void run()
+	   {
+		  Thread t= Thread.currentThread();
+		 String name= t.getName();
+		 
+		 if(name.equals("ADD"))
+		 {
+			 addition();
+			 
+		 }else if(name.equals("CHAR"))
+		 {
+			 printchar();
+		 }
+		 else {
+			 printnum();
+		 }
+		 	
+	   }
+	   public void addition() {
+			Scanner sc= new Scanner(System.in);
+			System.out.println("Enter first number");
+		    int a=sc.nextInt();
+		    System.out.println("Enter second number");
+		    int b=sc.nextInt();
+		    int c=a+b;
+		    System.out.println(c);
+		    System.out.println("addtion ended");
+			
+			
+		}
+	   public  void printchar()
+		{
+	System.out.println("printing character strated");
+		    
+		    for(int i=10;i<=20;i++) {
+		    	System.out.println(i);
+		    	try {
+		    		Thread.sleep(4000);
+
+		    		}
+		    	catch(Exception e) {
+		    		System.out.println("yes");
+		    		
+		    	}
+		    }
+		    	}
+		    public void printnum(){
+				for(int i=65;i<=75;i++) {
+			    	System.out.println((char)i);
+			    	try {
+			    		Thread.sleep(4000);
+					    
+			    	}catch(Exception e) {
+			    		
+			    	}
+				
+			}
+   }
+
+
+	    	}
+
+
+
+
+
+public class typesthread {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Test t1=new Test();
+		Test t2=new Test();
+		Test t3=new Test();
+		
+		
+		t1.setName("ADD");
+		t2.setName("CHAR");
+		t3.setName("NUM");
+		
+		t1.start();
+		t2.start();
+		t3.start();
+		
+	}
+
+}
