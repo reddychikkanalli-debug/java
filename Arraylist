@@ -1,0 +1,68 @@
+package collection;
+
+import java.util.ArrayList;
+
+public class Arrlist {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		ArrayList al=new ArrayList();
+		al.add(10);
+		al.add(20);
+		al.add(30);
+		al.add(40);
+		al.add(50);
+		al.add(60);
+		System.out.println(al);
+//		al.remove(2);
+//		System.out.println(al);
+//		al.remove(new Integer(60));
+//		System.out.println(al);
+//		
+		
+		ArrayList b=new ArrayList();
+		b.add(20);
+		b.add(40);
+		System.out.println(b);
+		al.removeAll(b);
+//		System.out.println(al);
+//		al.clear();
+//		System.out.println(al);
+//		
+
+		
+		
+		
+		
+//		for addding
+//		System.out.println(al);
+//		System.out.println(al.get(2));
+//		System.out.println(al.subList(2, 4));
+//		System.out.println(al.indexOf(20));
+//		System.out.println(al.lastIndexOf(60));
+//		
+		
+		
+//		al.add(2.99);
+//		al.add(3,89);
+//		System.out.println(al);
+		
+//		ArrayList b=new ArrayList();
+//		
+//		b.add(100);
+//		b.add(200);
+//		b.add(300);
+//		b.add(400);
+//		b.add(500);
+//		b.add(600);
+//		System.out.println(b);
+//		
+//		al.addAll(b);
+//		System.out.println(al);
+//		al.addAll(2,b);
+//		System.out.println(al);
+	}
+
+}
