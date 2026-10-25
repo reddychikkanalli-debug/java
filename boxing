@@ -1,0 +1,22 @@
+package collection;
+
+import java.util.ArrayList;
+
+public class Boxing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		
+		ArrayList al=new ArrayList();
+		al.add(new Integer(120));//boxing/
+		al.add(20);//auto-boxing//
+		al.add(new Double(30));
+		al.add(40);
+		al.add(new Boolean(true));
+		al.add("java");//yhis cant be done bcz it is alredy object//
+		System.out.println(al);
+//		int a=al.get(2);this cnt bedone u converting object to int
+	}
+
+}
