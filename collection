@@ -1,0 +1,21 @@
+package collection;
+
+import java.util.PriorityQueue;
+
+public class Exp04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		PriorityQueue p=new PriorityQueue();
+		p.add(10);
+		p.add(110);
+		p.add(30);
+		p.add(60);
+		p.add(90);
+		p.add(60);
+		System.out.println(p);
+
+	}
+
+}
